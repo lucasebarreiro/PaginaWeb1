@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <script src="/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var numero=0;
+            $(".comprarIndex").click(function() {
+                numero++;
+                $(".contadorCarro").text(numero);
+            });
+            
+        });
+    </script>
+    
+    
+    
+   
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Inicio</title>
+</head>
+<body>
+    <header id="headerIndex">
+        <div class="topnav">
+            <div class="topnav__contenedor contenedor">
+                <a href="/index.html">
+                <img class="img--nav--logo"  src="/Fotos/Logo.png" alt="">
+                </a>
+                <div class="contenedor__buscador">
+                    <input class="buscador" type="text" placeholder="Buscar"> 
+                </div>
+                <img class="img--nav"  src="/Fotos/Lupa.png" alt=""> 
+                <a class="compras" href="/giftcard.html">
+                <div>    
+                <p class="contadorCarro">0</p>
+                <img class="compras"  src="/Fotos/carro.png" alt="">
+                
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav__contenedor contenedor">
+                <a class="nav__link" href="/inscripcion.html">Incripcion</a>
+                <a class="nav__link" href="/calendario.html">Calendario</a>
+                <a class="nav__link" href="/contacto.html">Contacto</a>
+                <a class="nav__link" href="/curso.html">Cursos</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="">
+
+        <!-- ////////// Carrousel  ////////// -->
+
+        
+        <div class="contenedor carrusel">
+            
+            <ul class="slider ulSlider">
+              <li id="slide1">
+                <img src="/Fotos/carr deportes.jpg"/>
+              </li>
+              <li id="slide2">
+                <img src="/Fotos/carr rugby.jpg"/>
+              </li>
+              <li id="slide3">
+                <img src="/Fotos/carr tenis.jpg">
+              </li>
+            </ul>
+            
+            
+            <ul  class="menuSlider">   
+              <li>
+                <a href="#slide1">1</a>
+              </li>
+              <li>
+                <a href="#slide2">2</a>
+              </li>
+               <li>
+                <a href="#slide3">3</a>
+              </li>
+            </ul>
+            
+        </div>
+
+
+
+
+
+
+
+
+        <!-- ////////// Separador Pasos a realizar ////////// -->
+
+        <div>
+            <h3 class="centrar-texto titulo h2Index">Pasos A Seguir</h3>
+        </div>
+
+        <!-- ////////// Pasos A realizar ////////// -->
+
+        <div class="pasos">
+
+            <!-- Pasos -->
+
+            <div class="grid contenedor">
+
+                <div class="">
+                    <img class="img__pasos" src="Fotos/Paso 1.jpg" alt="Paso1">
+                </div>
+                    
+                <div class="">
+                    <img class="img__pasos" src="Fotos/Paso 2.jpg" alt="Paso2">
+                </div>
+
+                <div class="">
+                    <img class="img__pasos" src="Fotos/Paso 3.jpg" alt="Paso3">
+                </div>
+
+            </div>
+
+        </div> <!-- Fin Pasos -->
+
+
+        <!-- ////////// Separador Cursos ////////// -->
+
+
+        <div>
+            <h3 class="centrar-texto titulo h2Index">Cursos Destacados</h3>
+
+        </div> <!-- Fin Separador -->
+
+
+
+        <!-- ////////// Cudricula ////////// -->
+
+
+
+        <div class="cursos">
+
+            <!-- Entrada 1 -->
+
+            <div class="contenedor grid">
+
+                <div class="curso">
+                    <img class="curso__img" src="/Fotos/Futbol.jpg" alt="Futbol1">
+
+                    <div class="descripcion">
+                        <p class="titulo__descripcion">Futbol Amateur</p>
+                        <p class="p__descripcion"><span class="horas">90</span> Horas</p>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--naranja" href="/curso.html">Ver Mas</a>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--violeta comprarIndex" href="#">Comprar</a>
+                    </div>
+
+                </div> 
+
+                <!-- Entrada 2 -->
+
+                <div class="curso">
+                    <img class="curso__img" src="/Fotos/Padel.jpg" alt="Padel">
+
+                    <div class="descripcion">
+                        <p class="titulo__descripcion">Padel Principiante</p>
+                        <p class="p__descripcion"><span class="horas">110</span> Horas</p>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--naranja" href="/curso.html">Ver Mas</a>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--violeta comprarIndex" href="#">Comprar</a>
+                    </div>
+
+                </div> 
+
+                <!-- Entrada 3 -->
+
+                <div class="curso">
+                    <img class="curso__img" src="/Fotos/Rugby.jpg" alt="Rugby">
+
+                    <div class="descripcion">
+                        <p class="titulo__descripcion">Rugby amateur</p>
+                        <p class="p__descripcion"><span class="horas">45</span> Horas</p>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--naranja" href="/curso.html">Ver Mas</a>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--violeta comprarIndex" href="#">Comprar</a>
+                    </div>
+
+                </div> 
+
+                <!-- Entrada 4 -->
+
+                <div class="curso">
+                    <img class="curso__img" src="/Fotos/Futbol2.jpg" alt="Futbol2">
+
+                    <div class="descripcion">
+                        <p class="titulo__descripcion">Futbol Profesional</p>
+                        <p class="p__descripcion"><span class="horas">60</span> Horas</p>
+                    </div>
+
+                    <div class="curso__boton"> 
+                        <a class="boton__index boton--naranja" href="/curso.html">Ver Mas</a>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--violeta comprarIndex" href="#">Comprar</a>
+                    </div>
+
+                </div> 
+
+                <!-- Entrada 5 -->
+
+                <div class="curso">
+                    <img class="curso__img" src="/Fotos/Padel2.jpg" alt="Padel2">
+
+                    <div class="descripcion">
+                        <p class="titulo__descripcion">Padel Profesional</p>
+                        <p class="p__descripcion"> <span class="horas">85</span> Horas</p>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--naranja" href="/curso.html">Ver Mas</a>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--violeta comprarIndex" href="#">Comprar</a>
+                    </div>
+
+                </div> 
+
+                <!-- Entrada 6 -->
+
+                <div class="curso">
+                    <img class="curso__img" src="/Fotos/Rugby2.jpg" alt="Rugby2">
+
+                    <div class="descripcion">
+                        <p class="titulo__descripcion">Rugby Profesional</p>
+                        <p class="p__descripcion"><span class="horas">70</span> Horas</p>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--naranja" href="/curso.html">Ver Mas</a>
+                    </div>
+
+                    <div class="curso__boton">
+                        <a class="boton__index boton--violeta comprarIndex" href="#">Comprar</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div> <!-- Fin Cuadricula -->
+
+
+
+
+
+        <!-- ////////// Separador Metodos de Pago ////////// -->
+
+        <div>
+            <h3 class="centrar-texto titulo h2Index">Metodos De Pago</h3>
+        </div>
+
+        <!-- ////////// Metodos de Pago ////////// -->
+
+        <div>
+
+            <!-- Pago -->
+
+            <div class="pago contenedor">
+                <div>
+                    <img class="pago__img" src="Fotos/Visa.png" alt="">
+                </div>
+
+                <div>
+                    <img class="pago__img" src="Fotos/Mastercard.png" alt="">
+                </div>
+
+                <div>
+                    <img class="pago__img" src="/Fotos/BBVA.png" alt="">
+                </div>
+
+                <div>
+                    <img class="pago__img" src="/Fotos/Mercado Pago.png" alt="">
+                </div>
+
+                <div>
+                    <img class="pago__img" src="/Fotos/ICBC.png" alt="">
+                </div>
+            </div>
+
+        </div> <!-- Fin metodos De pago -->
+
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer">Integrantes</h3>
+            <img class="footer_foto user__img" src="Fotos/User.png" alt="">
+            <p class="titulo__descripcion">Lucas Barreiro</p>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Menu inferior</h3>
+            <a class="link__footer titulo__descripcion" href="index.html">Home</a>
+            <a class="link__footer titulo__descripcion" href="inscripcion.html">Incribirme</a>
+            <a class="link__footer titulo__descripcion" href="giftcard.html">Giftcard</a>
+            <a class="link__footer titulo__descripcion" href="contacto.html">Contacto</a>
+            <a class="link__footer titulo__descripcion" href="calendario.html">Calendario</a>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Redes sociales</h3>
+            <img class="footer_foto instagram__img" src="Fotos/instragram.png" alt="">
+            <a class="link__footer titulo__descripcion" href="">Lucas Barreiro</a>
+            
+        </div>
+
+    </footer>
+    <script src="js/codigo.js"></script>
+</body>
+</html>

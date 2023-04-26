@@ -1,0 +1,18 @@
+body {
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+  }
+
+header {
+    z-index: 2;
+}
+
+  #calendar {
+      font-size: 14;
+    max-width:900px;
+    margin: 0 auto;
+    padding-top: 50px;
+      z-index: 0;
+  }
+
+	
+	

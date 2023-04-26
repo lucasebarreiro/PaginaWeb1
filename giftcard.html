@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="js/jquery.min.js"></script>
+    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+
+    <title>Giftcard</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="topnav__contenedor contenedor">
+                <a href="/index.html">
+                <img class="img--nav--logo"  src="/Fotos/Logo.png" alt="">
+                </a>
+                <div class="contenedor__buscador">
+                    <input class="buscador" type="text" placeholder="Buscar">
+                    <img class="img--nav"  src="/Fotos/Lupa.png" alt="">  
+                </div>
+                <a class="compras" href="/giftcard.html">
+                <img class="compras"  src="/Fotos/carro.png" alt="">
+                </a>    
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav__contenedor contenedor">
+                <a class="nav__link" href="/inscripcion.html">Incripcion</a>
+                <a class="nav__link" href="/calendario.html">Calendario</a>
+                <a class="nav__link" href="/contacto.html">Contacto</a>
+                <a class="nav__link" href="/curso.html">Cursos</a>
+            </div>
+        </div>
+    </header>
+    <main class="contenedor">
+        <!-- SECCION IZQUIERDA DE LA PAGINA, VISUALIZACION-->
+        <div class="seccion__giftcard">      
+            <div>
+               <div id="giftCard"  class="gift__izquierda">
+                    <div class="boton__izq">
+                        <a class="etiqueta__botonIzq" href="#">$<span id="precioGift"></span><span>.-</span></a> <!-- utilizamos 1 span para el innerHTML y otro para los signos de puntiacion finales-->
+                    </div>
+                    <div id="tituloGift" class="titulo__gift">
+                        <p class="h3">GIFT CARD para</p>
+                        <p id="destinatarioGift" class="h2__gift"> <span id="receptorGift"> </span>!</p> 
+                    </div> <!-- en el P no dice nada porque se hizo un innerHTML en JS agregandole la palabra DESTINATARIO usando el ID y luego con la funcion mostrarNombre() de mas abajo se le agrega el nombre del destinatario linkeado con el INPUT  -->
+                </div>     
+            
+                <p class="p__gift"> VISUALIZACION DE GIFTCARD </p>
+                
+
+            </div>
+
+            <!-- SECCION DERECHA DE LA PAGINA, PERSONALIZACION-->
+            <div class="gift__derecha">
+                <h3 class="h3__gift">PERSONALIZACION DE GIFTCARD</h3>
+                <div class="nombre__gift">
+                    <input id="inputDestinatario" class="opcion" name="nombre" type="text" placeholder="Nombre del Destinatario" onkeyup="mostrarNombre()" > <!-- INPUT linkeado mediante variables al nombre del DESTINATARIO -->
+                </div>
+                <br>
+                <p class="h3">Color</p>
+                <div class="colores__gift">
+                    <div class="colorsito1">
+                        <img class="img__gift" src="/Fotos/ciruculo-rojo.png" alt="color">
+                        <br>
+                        <input id="fuenteRoja" class="radio" type="radio" name="Color1" value="red" onclick="cambiarColorFuenteRojo()">
+                    </div>
+                    <div class="colorsito1">
+                        <img class="img__gift" src="/Fotos/circulo-azul.png" alt="color">
+                        <br>
+                        <input id="fuenteAzul" class="radio" type="radio" name="Color1" value="blue" onclick="cambiarColorFuenteAzul()">
+                    </div>
+                    <div class="colorsito1">
+                        <img class="img__gift" src="/Fotos/ciruclo-amarillo.png" alt="color">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                        <br>
+                        <input id="fuenteAmarilla" class="radio" type="radio" name="Color1" value="yellow" onclick="cambiarColorFuenteAmarillo()">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                    </div>
+                    <div class="colorsito1">
+                        <img class="img__gift" src="/Fotos/circulo-verde.png" alt="color">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                        <br>
+                        <input id="fuenteVerde" class="radio" type="radio" name="Color1" value="green" onclick="cambiarColorFuenteVerde()">
+                    </div>
+                    <div class="colorsito1">
+                        <img class="img__gift" src="/Fotos/naranja-cirulo.png" alt="color">
+                        <br>
+                        <input id="fuenteNaranja" class="radio" type="radio" name="Color1" value="orange" onclick="cambiarColorFuenteNaranja()">
+                    </div>
+                        
+                </div>
+                <br>
+                <p class="h3">Tamaño de fuente</p>
+                <br>
+                <div class="fuente__gift">
+                    <div class="fuentesita1">
+                        <p class="fuente1">20px</p>
+                        <br>
+                        <input id="20px" class="radio" type="radio" name="fuente" value="20px" onclick="cambiarFuente20()">
+                    </div>
+                    <div class="fuentesita2">
+                        <p class="fuente2">28px</p>
+                        <br>
+                        <input id="28px" class="radio" type="radio" name="fuente" value="28px" onclick="cambiarFuente28()">
+                    </div>
+                    <div class="fuentesita3">
+                        <p class="fuente3">32px</p>
+                        <br>
+                        <input id="32px" class="radio" type="radio" name="fuente" value="32px" onclick="cambiarFuente32()">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                    </div>
+                    <div class="fuentesita4">
+                        <p class="fuente4">48px</p>
+                        <br>
+                        <input id="48px" class="radio" type="radio" name="fuente" value="48px" onclick="cambiarFuente48()">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                    </div>
+                    <div class="fuentesita5">
+                        <p class="fuente5">60px</p>
+                        <br>
+                        <input id="60px" class="radio" type="radio" name="fuente" value="60px" onclick="cambiarFuente60()">
+                    </div>
+                        
+                </div>
+                <br>
+                <div class="monto__gift">
+                    <label class="h3" for="monto"> Monto $</label>
+                    <input id="montoGift" class="opcion__monto" type="text" onkeyup="mostrarPrecio()">
+                </div>
+                <br>
+                <p class="h3">Ubicación</p> 
+                <div class="ubicacion__gift">
+                
+                    <div class="ubicacion">
+                        <img class="img__gift" src="/Fotos/abajo izquierda.JPG" alt="color" >
+                        <br>
+                        <input class="radio" type="radio" name="ubicacion" value="IzqA" onclick="cambiarPosicionIzqA()">                 
+                    </div>
+                    <div class="ubicacion">
+                        <img class="img__gift" src="/Fotos/abajo derecha.JPG" alt="color">              
+                        <br>
+                        <input class="radio" type="radio" name="ubicacion" value="Der" onclick="cambiarPosicionDer()">    <!-- Los name son iguales para que el radio sea unico-->          
+                    </div>
+                    <div class="ubicacion">
+                        <img class="img__gift" src="/Fotos/arriba izquierda.JPG" alt="color"> 
+                        <br>
+                        <input class="radio" type="radio" name="ubicacion" value="IzqB" onclick="cambiarPosicionIzqB()">
+                    </div>
+                    <div class="ubicacion__reset">
+                        <button class="reset" name="ubicacion" onclick="posicionOriginal()">RESET</button>
+
+                    </div>
+                    
+
+                </div>
+                <br>
+                <p class="h3">Fondo</p>
+                <div class="colores__gift">
+                    <div class="fondo">
+                        <img class="img__gift" src="/Fotos/fondo rojo.png" alt="color">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                        <br>
+                        <input id="fondoRojo" class="radio" type="radio" name="Color2" value="red" onclick="cambiarColorFondoRojo()">     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                    </div>
+                    <div class="fondo">                                                     <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                        <img class="img__gift" src="/Fotos/cuadrado-azul.png" alt="color">
+                        <br>
+                        <input id="fondoAzul" class="radio" type="radio" name="Color2" value="blue" onclick="cambiarColorFondoAzul()">
+                    </div>
+                    <div class="fondo">
+                        <img class="img__gift" src="/Fotos/cuadrado-amarillo.png" alt="color">
+                        <br>
+                        <input id="fondoAmarillo" class="radio" type="radio" name="Color2" value="yellow" onclick="cambiarColorFondoAmarillo()">    <!-- LOS NAME, VALUE, y ALT ESTAN REPETIDOS PORQUE ESTA PEGADOS-->
+                    </div>
+                    <div class="fondo">
+                        <img class="img__gift" src="/Fotos/cuadrado-verde.png" alt="color">
+                        <br>
+                        <input id="fondoVerde" class="radio" type="radio" name="Color2" value="green" onclick="cambiarColorFondoVerde()">
+                    </div>
+                    <div class="fondo">
+                        <img class="img__gift" src="/Fotos/naranja-cuadrado.png" alt="color">
+                        <br>
+                        <input id="fondoNaranja" class="radio" type="radio" name="Color2" value="orange" onclick="cambiarColorFondoNaranja()">
+                    </div>
+                        
+                </div>
+                <br>
+                <br>
+                <div class="boton__gift">
+                    <a class="boton__gift1" href="#">CONFIRMAR</a>
+                    <br><br>
+
+                </div>
+                <br>
+                <br>
+                
+
+            </div> 
+            
+          </div>
+            
+    </main>
+       
+    <footer class="footer">
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer">Integrantes</h3>
+            <img class="footer_foto user__img" src="Fotos/User.png" alt="">
+            <p class="titulo__descripcion">Lucas Barreiro</p>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Menu inferior</h3>
+            <a class="link__footer titulo__descripcion" href="index.html">Home</a>
+            <a class="link__footer titulo__descripcion" href="inscripcion.html">Incribirme</a>
+            <a class="link__footer titulo__descripcion" href="giftcard.html">Giftcard</a>
+            <a class="link__footer titulo__descripcion" href="contacto.html">Contacto</a>
+            <a class="link__footer titulo__descripcion" href="calendario.html">Calendario</a>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Redes sociales</h3>
+            <img class="footer_foto instagram__img" src="Fotos/instragram.png" alt="">
+            <a class="link__footer titulo__descripcion" href="">Lucas Barreiro</a>
+            
+        </div>
+
+    </footer>
+    <script src="/js/codigo.js"></script>     
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="/js/codigo.js"></script>
+    
+    
+    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="topnav__contenedor contenedor">
+                <a href="/index.html">
+                <img class="img--nav--logo"  src="/Fotos/Logo.png" alt="">
+                </a>
+                <div class="contenedor__buscador">
+                    <input class="buscador" type="text" placeholder="Buscar">
+                    <img class="img--nav"  src="/Fotos/Lupa.png" alt="">  
+                </div>
+                <a class="compras" href="/giftcard.html">
+                <img class="compras"  src="/Fotos/carro.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav__contenedor contenedor">
+                <a class="nav__link" href="/inscripcion.html">Incripcion</a>
+                <a class="nav__link" href="/calendario.html">Calendario</a>
+                <a class="nav__link" href="/contacto.html">Contacto</a>
+                <a class="nav__link" href="/curso.html">Cursos</a>
+            </div>
+        </div>
+    </header>
+                                <!-- SECCION DE CONTACTO - FORMULARIO-->
+    <main class="contenedor">
+        <h2 class="centrar-texto titulo">CONTACTO</h2>
+
+        <div class="contacto contenedor">
+
+                <form id="formContacto" class="formulario" action="https://www.google.com.ar/" method="get" name="form">
+                    <div class="name__form">
+                        <label class="h3" for="nombre">Nombre y Apellido</label>
+                        <br>
+                        <input id="nombreContacto" class="opcion2" type="text" placeholder="Nombre y Apellido*" name="nombre" required>
+                    </div>
+                    <div class="mail">
+                        <label class="h3" for="email">Email</label>
+                        <br>
+                        <input id="emailContacto" class="opcion2" type="text" placeholder="Email*" name="email" required>
+                    </div>
+                    <div class="phone">
+                        <label class="h3" for="telefono">Telefono</label>
+                        <br>
+                        <input id="telContacto" class="opcion2" type="number"  placeholder="Telefono*" name="telefono" required>
+                    </div>
+                    <div class="ingreso__consulta">
+                        <label class="h3" for="consulta">Ingrese su consulta</label>
+                        <br>
+                        <textarea id="consultaContacto" onkeyup="countChars();" class="consulta"   required></textarea>
+                        <p id="caracteresRestantes">1000 caracteres restantes</p>
+                        
+
+                    </div>
+                    <br>
+                    <div class="contacto__boton">
+                        <input type="submit" onclick="valida_envia()" class="boton__enviarContacto" id="Enviar" value="Enviar">
+                    </div>
+                    <div id="mensajeContacto" class="error">
+
+                    </div>
+                </form>    
+                <!-- DATOS DE LA EMPRESA -->
+                <div class="contacto__empresa">
+                        <p class="h3 datos">DATOS DE LA EMPRESA</p>
+                    <div class="info__contacto">
+                        <img class="iconito" src="/Fotos/lugarcito.png" alt="lugar">
+                        <p class="h3">Florencio Varela 1903 (B1754JEC)</p>
+                    </div> 
+
+                    <div class="info__contacto">
+                        <img class="iconos" src="/Fotos/correiro.jpg" alt="correo">
+                        <p class="h3">unlam@edu.com.ar</p>   
+                    </div>  
+
+                    <div class="info__contacto">   
+                        <img class="iconos" src="/Fotos/telefonito.png" alt="telefono">
+                        <p class="h3">(+5411) 4480-8900</p>     
+                    </div> 
+                </div>
+
+        </div>
+
+        <!-- MAPA INSERTADO -->
+
+        <div class="mapa">
+            <h2 class="centrar-texto titulo">UBICACION</h2>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52497.549854735706!2d-58.60167183704959!3d-34.67750464443296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1621548180664!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+        <br><br><br><br><br>
+    </main> 
+    
+    <footer class="footer">
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer">Integrantes</h3>
+            <img class="footer_foto user__img" src="Fotos/User.png" alt="">
+            <p class="titulo__descripcion">Lucas Barreiro</p>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Menu inferior</h3>
+            <a class="link__footer titulo__descripcion" href="index.html">Home</a>
+            <a class="link__footer titulo__descripcion" href="inscripcion.html">Incribirme</a>
+            <a class="link__footer titulo__descripcion" href="giftcard.html">Giftcard</a>
+            <a class="link__footer titulo__descripcion" href="contacto.html">Contacto</a>
+            <a class="link__footer titulo__descripcion" href="calendario.html">Calendario</a>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Redes sociales</h3>
+            <img class="footer_foto instagram__img" src="Fotos/instragram.png" alt="">
+            <a class="link__footer titulo__descripcion" href="">Lucas Barreiro</a>
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="js/jquery.min.js"></script>
+    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+
+    <title>inscripcion</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="topnav__contenedor contenedor">
+                <a href="/index.html">
+                <img class="img--nav--logo"  src="/Fotos/Logo.png" alt="">
+                </a>
+                <div class="contenedor__buscador">
+                    <input class="buscador" type="text" placeholder="Buscar">
+                    <img class="img--nav"  src="/Fotos/Lupa.png" alt="">  
+                </div>
+                <a class="compras" href="/giftcard.html">
+                <img class="compras"  src="/Fotos/carro.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav__contenedor contenedor">
+                <a class="nav__link" href="/inscripcion.html">Incripcion</a>
+                <a class="nav__link" href="/calendario.html">Calendario</a>
+                <a class="nav__link" href="/contacto.html">Contacto</a>
+                <a class="nav__link" href="/curso.html">Cursos</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- CLOSE -->
+        <div class= "close">
+            <a id="#close" class= "boton rojo"  href="#close">Cerrar</a>
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal -->
+            <div class="modal-content">
+            <h1 class="h2">Personas Inscriptas</h1>
+            <div id ="ingresar_per">
+                
+            </div>
+    
+          </div>
+        </div>  
+        <h2 class="h2 contenedor">TITULO DE CURSO</h2>
+            <h3 class="h3 contenedor">INSCRIPCIÓN</h3>
+                <div class="personas contenedor">
+                    <form id="Inscriptos" action=""></form> <!--Dejamos un form porque todavia no sabemos si se le puede poner javascript a los DIV originales-->
+                        <div class="personaInscripta">
+                            <input class="opcion" type="text" placeholder="Nombre*"   required>
+                            <input class="opcion" type="text" placeholder="Apellido*" required>
+                            <input class="opcion" type="number" placeholder="DNI*" required>
+                            <img id="eliminar" class="icon__opcion" src="/Fotos/menos.png" alt="menos" >
+                        </div>                     
+                        <div class="personaInscripta">
+                            <input class="opcion" type="text" placeholder="Nombre*" required>
+                            <input class="opcion" type="text" placeholder="Apellido*" required>
+                            <input class="opcion" type="number" placeholder="DNI*" required>
+                            <img id="eliminar" class="icon__opcion" src="/Fotos/menos.png" alt="menos" >
+                        </div>
+                        <div id="tercerInscripto" class="personaInscripta">
+                            <input class="opcion" type="text" placeholder="Nombre*" required>
+                            <input class="opcion" type="text" placeholder="Apellido*" required>
+                            <input class="opcion" type="number" placeholder="DNI*" required>
+                            <img id="eliminar" class="icon__opcion" src="/Fotos/menos.png" alt="menos"  >
+                        </div>
+                    </form> 
+                        <div class="agregar__persona contenedor">
+                            <img id="agregarOpcion" class="icon__opcion" src="/Fotos/mas.png" alt="mas" onclick="agregarOpcion()">
+                            <span class="h3__agregar">Agregar persona</span>
+                        </div>
+                        <div class="precio__boton contenedor">
+                            <span class="precio">0000.00$</span>
+                            <input type="submit" class="boton__inscribirse"  id="Enviar" value="INSCRIBIRSE" >  
+                </div>
+    </main>
+    <script src="js/codigo.js"></script>
+    <br><br><br><br><br><br><br>
+    <footer class="footer">
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer">Integrantes</h3>
+            <img class="footer_foto user__img" src="Fotos/User.png" alt="">
+            <p class="titulo__descripcion">Lucas Barreiro</p>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Menu inferior</h3>
+            <a class="link__footer titulo__descripcion" href="index.html">Home</a>
+            <a class="link__footer titulo__descripcion" href="inscripcion.html">Incribirme</a>
+            <a class="link__footer titulo__descripcion" href="giftcard.html">Giftcard</a>
+            <a class="link__footer titulo__descripcion" href="contacto.html">Contacto</a>
+            <a class="link__footer titulo__descripcion" href="calendario.html">Calendario</a>
+        </div>
+
+        <div class="participantes centrar-texto">
+            <h3 class="titulo__footer centrar-texto">Redes sociales</h3>
+            <img class="footer_foto instagram__img" src="Fotos/instragram.png" alt="">
+            <a class="link__footer titulo__descripcion" href="">Lucas Barreiro</a>
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>

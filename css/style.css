@@ -1,0 +1,872 @@
+:root {
+    --color-principal: #;
+    --fuente-principal: 'Roboto', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales -------------------------------------------------------------------------------------------------------------GLOBALES*/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    /* width: min(90%, 120rem); Otra forma de hacer el contenedor con minimo y maximo de contenido  */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size:4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+form{
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utilidades Para utilizar, eso son las clases, SE VUELVEN A UTILIZAR, no como las ID*/
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.titulo {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* Barra de BUSQUEDA --------------------------------------------------------------------- Barra BUSQUEDA */
+
+.topnav {
+    width: 100%;
+    height: 22rem;
+    background-color: gray;
+}
+
+.img--nav {
+    width: 20px;
+}
+
+.img--nav--logo {
+    max-width: 150px;
+    margin-left: 11rem;
+}
+
+.topnav__contenedor {
+    margin: 0 auto;
+}
+
+.compras {
+    max-width: 50px;
+    margin-left: 155px;
+    margin-top: 10px;
+}
+
+.contenedor__buscador {
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 6rem;
+}
+
+@media (min-width: 768px) {
+    .topnav {
+        height: 10rem;
+    }
+    .topnav__contenedor {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+    }
+
+    .compras {
+        grid-column: 4 / 5;
+        max-width: 50px;
+        margin-left: 0rem;
+        margin-top: 0;
+    }
+    .img--nav--logo {
+        margin-left: 0rem;
+    }
+
+    .contenedor__buscador {
+        align-items: center;
+        padding-left: 0rem;
+    }
+}
+
+
+.buscador {
+    width: 240px;
+    height: 40px;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+/* Nav Inferior -------------------------------------------------------------- Nav Inferior */
+
+.nav {
+    background-color: rgb(80, 80, 253);
+    height: 15rem;
+    text-align: center;
+}
+
+.nav__contenedor {
+    padding-top: 2.5rem;
+}
+
+.nav__link {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .nav__contenedor {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav {
+        height: 7rem;
+    }
+}
+
+/* Contacto --------------------------------------------------------------------- Contacto */
+
+@media (min-width: 768px) {
+    .contacto {
+        margin-left: 150px;
+        margin-right: 0px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr)
+        
+        
+    }
+
+    .contacto__empresa {
+        grid-column: 2 / 3;
+    
+    }
+
+}
+
+.h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+.opcion2{
+    height: 30px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.consulta {
+    height: 120px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.contacto__boton{
+    align-items: right;
+}
+.boton__enviarContacto{
+    color: white;
+    background-color: black;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+/* Contacto Empresa ------------------------------------------------------------------------------ Contacto Empresa */
+.contacto__empresa{
+    background-color: white;
+    padding: 5px 5px 5px 10px;
+    border: 2px solid;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 370px;
+    
+    
+}
+.info__contacto{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.iconos{
+    width: 50px;
+    height: 50px;
+}
+.iconito{
+    width: 50px;
+    padding-right: 15px;
+    padding-left: 10px;
+
+}
+.error{
+    color: crimson;
+}
+
+/* Mapa --------------------------------------------------------------- Mapa */
+@media (min-width: 768px) {
+    .map{
+        width: 120rem;
+        height: 40rem;
+        align-items: center;
+        border-radius: 1rem 1rem 1rem 1rem;
+
+    }
+}
+/* ESTILOS DE LA PAGINA DE INSCRIPCION --------------------------------------------------------------- INSCRIPCION */
+/* Algunas de las clases se reciclan de otras paginas como por ejemplo "h3" y demas */
+.personas{
+    margin: 0 auto;
+    justify-content: space-between;
+}
+@media (min-width: 768px ) {
+    /*.persona1,.persona2,.persona3*/.personaInscripta{  /* cambiamos las clases de las incripciones de personas diferentes a una que las une a todas*/
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+}
+.icon__opcion{
+    width: 60px;
+    padding: 20px 20px 30px 0px;
+    
+}
+.opcion{
+    height: 30px;
+    width: 350px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+      
+}
+.inscriptos{
+    margin-bottom: 0rem;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.agregar__persona{
+    display: flex;
+}
+.h3__agregar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+
+}
+.precio__boton{
+    display: flex;    
+}
+
+.boton__inscribirse{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-color: rgb(52, 95, 129);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    margin-left: 10px;
+    border-radius: 50px;
+    margin-bottom: 0;
+}
+.boton__inscribirse__detalle{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(52, 95, 129);
+    color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+.precio{
+    background-color: black;
+    font-size: 1.5rem;
+    color: white;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    border-radius: 0.5rem;
+}
+.h2{
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/*--------------------------------------------MODAL----------------------------------------*/
+ /* Modal - Espacio de CSS para la ventana de inscripcion LE DAMOS DISPLAY NONE para que aparezca al dar al bonton */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+/* Modal Content */
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+/* The Close Button */
+.close {
+color: #aaaaaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+li{                             /* ESTA LI ES LA QUE APARECE CUANDO LE DAMOS A INSCRIPCION  */
+    font-size: 14px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+/* GIFTCARD ----------------------------------------------------------------------------------------------------- GIFTCARD */
+.h3__gift{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.img__gift{
+    width: 5rem;
+    padding-left: 0.3rem;
+    
+}
+.colores__gift{
+    display: flex;
+}
+.radio{
+    margin-left: 2rem;
+    
+}
+.fuente__gift{
+    display: flex;
+}
+.fuentesita{
+    padding-left: 0.8rem;
+
+}
+.fuente1{
+    font-size: 13px;
+    text-align: center;
+    padding-left: 1.5rem;
+}
+.fuente2{
+    font-size: 13px;
+    text-align: center;
+    padding-left: 1.5rem;
+}
+.fuente3{
+    font-size: 13px;
+    text-align: center;
+    padding-left: 1.5rem;
+}
+.fuente4{
+    font-size: 13px;
+    text-align: center;
+    padding-left: 1.5rem;
+}
+.fuente5{
+    font-size: 13px;
+    text-align: center;
+    padding-left: 1.5rem;
+}
+.fuentesita2, .fuentesita3, .fuentesita4, .fuentesita5{
+    padding-left: 0.7rem;
+}
+.opcion__monto{
+    height: 30px;
+    width: 230px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+      
+}
+.ubicacion__gift{
+    display: flex;
+}
+.boton__gift1{
+    color: white;
+    background-color: rgb(135, 152, 226);
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: black 3px 3px 3px 3px;
+}
+.h2__gift{
+    font-family: Arial, Helvetica, sans-serif, bold;
+    font-size: 30px;
+    margin-top: 4rem;
+    
+    
+}
+
+.p__gift{
+    font-family: Arial, Helvetica, sans-serif, bold;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.gift__izquierda{
+    border-style: solid;
+    width: 45rem;
+    height: 45rem;
+    background-color: gray;
+    text-align: center;
+    padding-top: 2rem;
+    border-color: black;
+}
+
+.titulo__gift{
+    padding-top: 8rem;
+}
+.boton__izq{
+    text-align: right;
+    padding-top: 0.5rem;
+    
+}
+.etiqueta__botonIzq{
+    color: white;
+    background-color: black;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+}
+.seccion__giftcard{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10rem ;
+    padding-right: 10rem ;
+    padding-top: 10rem;
+}
+
+.h3__previaGift{
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    padding-top: 15rem;
+    text-align: center;
+    align-items: center;
+    
+}
+.reset{
+    width: 5rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ubicacion__reset{
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+
+/* ESPACIO PARA ESTILOS DEL INDEX -------------------------------------------------------------------------- ESPACIO PARA ESTILOS DEL INDEX */
+
+
+                                           /* Pasos */
+
+                                           .pasos {
+                                            background: rgb(0,0,0);
+                                            background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(80,80,253,1) 50%, rgba(0,0,0,1) 100%);
+                                            height: 78rem;
+                                            margin: 0 auto;
+                                            margin-top: 2rem;
+                                            padding-top: 5rem;
+                                        }
+                                        
+                                        .img__pasos {
+                                            max-width: 250px;
+                                            display: block;
+                                            margin: auto;
+                                            margin-bottom: 2rem;
+                                            border: 2px solid #000;
+                                            box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+                                            transition: 0.5s
+                                        }
+                                        
+                                        .img__pasos:hover {
+                                            transform: translateY(-15px);
+                                        }
+                                        
+                                        @media (min-width: 768px) {
+                                            .pasos {
+                                                height: 30rem;
+                                            }
+                                        }
+                                        
+                                        .img__pasos::last-of-type {
+                                            margin-bottom: 0;
+                                        }
+                                        
+                                                                                   /* Cursos */
+                                        
+                                        .cursos {
+                                            background: rgb(0,0,0);
+                                            background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(80,80,253,1) 50%, rgba(0,0,0,1) 100%);
+                                            padding-top: 2rem;
+                                            padding-bottom: 2rem;
+                                        }
+                                        
+                                        .horas {
+                                            background-color: rgb(80, 80, 253);
+                                            padding: 5px;
+                                            border-radius: 10px;
+                                            color: #fff;
+                                        }
+                                        
+                                        @media (min-width: 768px) {
+                                            .grid {
+                                                display: grid;
+                                                grid-template-columns: repeat(3,1fr);
+                                                gap: 1rem;
+                                            }
+                                        }
+                                        
+                                        
+                                        .curso {
+                                            background-color: #fff;
+                                            max-width: 30rem;
+                                            border: 3px solid #000;
+                                            box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+                                            margin: auto;
+                                            padding: 10px;
+                                            border-radius: 20px;
+                                            margin-bottom: 2rem;
+                                            transition: 0.5s
+                                        }
+                                        
+                                        .curso::last-of-type {
+                                            margin-bottom: 0;
+                                        }
+                                        
+                                        .curso__img {
+                                            border-radius: 10px 10px 0px 0px;
+                                        }
+                                        
+                                        .curso:hover {
+                                            transform: translateY(-15px);
+                                        }
+                                        
+                                        .titulo__descripcion {
+                                            font-weight: 700;
+                                            font-size: 2rem;
+                                            font-family: var(--fuente-titulos);
+                                            text-align: center;
+                                        }
+                                        
+                                        .p__descripcion {
+                                            font-family: var(--fuente-titulos);
+                                            font-size: 2rem;
+                                            font-weight: 500;
+                                        }
+                                        
+                                        .curso__boton {
+                                            margin-bottom: 1rem;
+                                        }
+                                        
+                                        .boton__index {
+                                            font-family: var(--fuente-titulos);
+                                            padding: 6px 5px;
+                                            border-radius: 10px;
+                                            display: block;
+                                            margin: auto;
+                                            text-align: center;
+                                            color: #fff;
+                                            transition: 0.5;
+                                        }
+                                        
+                                        .boton__index:hover {
+                                            box-shadow: 0px 0px 10px 1px rgb(80, 80, 253);
+                                        }
+                                        
+                                        .boton--violeta {
+                                            background-color: rgb(80, 80, 253);
+                                        }
+                                        
+                                        .boton--naranja {
+                                            background-color: rgb(255, 113, 0);
+                                        }
+                                        
+                                        
+                                                                                   /* Metodo De Pago */
+                                        
+                                        
+                                        .pago__img {
+                                            max-width: 150px;
+                                            display: block;
+                                            margin: auto;
+                                            margin-bottom: 1rem;
+                                        }
+                                        
+                                        @media (min-width: 768px) {
+                                            .pago {
+                                                display: grid;
+                                                grid-template-columns: repeat(5, 1fr);
+                                                margin-bottom: 2rem;
+                                            }
+                                        }
+                                        
+                                        .pago__img::last-of-type {
+                                            margin-bottom: 0;
+                                    }
+                                    .slider{
+                                        margin-top: 1rem;
+                                    }
+                                    .contadorCarro{
+                                        margin: 0;
+                                        padding-left: 50px;
+                                    
+                                    }
+                                    .h2Index{
+                                        margin-top: 10px;
+                                        margin-bottom: 10px;
+                                        font-family: Arial, Helvetica, sans-serif;
+                                        font-weight: bold;
+                                        font-size: 40px;
+                                        text-shadow: 1px 1px 2px;
+                                        padding-top: 5px;
+                                        padding-bottom: 5px;
+                                    }
+                                
+
+/* ESPACIO PARA ESTILOS DEL CURSO -------------------------------------------------------------------------- ESPACIO PARA ESTILOS DEL CURSO */ 
+
+.imagenFutbolCurso{
+    height: 330px;
+    margin-right: 50px;
+    box-shadow: 3px 3px 5px black;
+    border: solid 2px black;
+    margin-top: 2rem; 
+}
+.seccionesCurso{
+    display: flex;
+    gap: 10rem;
+    margin-top: 3rem ;
+    margin-left: 15rem;
+}
+.dropdownMenu{
+	width: 100%;
+	margin-bottom: 3px;
+}
+.title{
+	padding: 7px 10px;
+	background-color: rgb(80, 80, 253);
+	color: white;
+	margin-bottom: 0;
+    font-size: 1.2rem;
+}
+.title:hover{
+	background-color: red;
+}
+.dropdownButton:hover{
+	cursor: pointer;
+}
+.dropdownButton > p .fa{
+	float: right;
+}
+.dropdownContent ul{
+	margin: 0;
+	padding: 0 10px;
+}
+.dropdownContent,
+.dropdownButton{
+	border: 1px solid rgb(80, 80, 253);
+}
+.dropdownContent{
+	padding: 15px 8px;
+	background-color: #fff;
+	margin-top: -1px;
+}
+.dropdownContent ul li{
+	list-style: none;
+	padding: 5px 0;
+}
+.dropdownContent ul li a{
+	text-decoration: none;
+}
+.dropdownContent ul li a:hover{
+	color: red;
+}
+.claseCurso{
+    color: black;
+}
+.usuarioDocente{
+    height: 18rem;
+    width: 25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.estrellas{
+    height: 25px;
+    margin-bottom: 2rem;
+}
+.seccionDocente{
+    display: flex;
+    background: grey;
+    border-radius: 5rem;
+    border-style: solid;
+}
+.h3Docente{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+.h3DocenteOpinion{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 3rem;
+    font-size: 1.5rem;
+
+}
+.h2White{
+    color: white;
+}
+
+/* Footer --------------------------------------------------------------------------------------------------------- Footer */
+
+.footer {
+    background-color: gray;
+    height: 87rem;
+    padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 35rem;
+    }
+}
+
+.titulo__footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.link__footer {
+    display: block;
+}
+
+.link__footer:hover {
+    color: rgba(80,80,253,1);
+}
+
+.footer_foto {
+    max-width: 100px;
+    transition: 0.5s;
+}
+
+.user__img {
+    transition: 0.5s;
+}
+
+.instagram__img:hover {
+    transform:rotate(360deg);
+}
+
+.user__img:hover {
+    transform:rotate(360deg);
+}
+
+.instagram__img {
+    margin-bottom: 2rem;
+    border-radius: 10rem;
+    transition: 0.5s;
+}
+
+.participantes {
+    border: 2px solid #000;
+    border-radius: 5rem;
+    margin: 2rem 6rem;
+   
+    box-shadow: 0px 0px 10px 1px rgb(255, 255, 255);
+}
+
+
+
+@media (min-width: 768px) {
+    
+}
+
